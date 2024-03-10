@@ -1,0 +1,458 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body,
+html {
+  cursor: none;
+  font-family: monospace;
+  background-color: #fffafdd2;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+
+}
+
+body::-webkit-scrollbar{
+display: none;
+}
+
+.page {
+  width: 100%;
+  height: 97vh;
+  background-color: #1d1d1c;
+  display: block;
+}
+
+.page2 {
+  width: 100%;
+  height: 100vh;
+  background-color: #fffafdd2;
+  display: block;
+  scroll-snap-align: start;
+}
+
+.header3 {
+height: 2rem;
+margin-top: -0.3rem;
+background-color: #1d1d1c;
+margin-bottom: 3rem;
+}
+.page3 {
+  height: 94vh;
+  background-color: #fffafdd2;
+  scroll-snap-align: start;
+  text-align: center;
+  display: grid;
+  font-weight: 400;
+  font-family: monospace;
+  font-size: 20px;
+  grid-template-columns:repeat(6,1fr);
+  grid-template-rows: repeat(5,1fr);
+  gap: 50px;
+  grid-template-areas: 
+". . two two . ."
+". one one . . ."
+". . . three three ."
+" . four four . . ."
+". . five five . ."
+}
+
+
+#element1 {
+  grid-area: one
+}
+
+#element2 {
+  grid-area: two
+}
+
+#element3 {
+  grid-area: three
+}
+
+#element4 {
+  grid-area: four
+}
+
+#element5 {
+  grid-area: five
+}
+
+#element6 {
+  grid-area: six;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+#element7 {
+  grid-area: seven;
+
+}
+
+.page-bg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #1d1d1c;
+}
+
+.noise {
+  background-image: url("https://foo-exp.s3.amazonaws.com/morph_mouse/noise_pattern.png");
+  background-size: 200px 200px;
+  background-repeat: repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: hard-light;
+}
+
+
+.container {
+  min-width:100%;
+  min-height: 100.4vh;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  max-height: 101vh;
+  max-width: 35%;
+  gap: 3%;
+  position: relative;
+}
+
+.particles-js-canvas-el {
+  position: absolute;
+  max-height: 140rem;
+}
+
+.text {
+display: grid;
+width: 100%;
+scroll-snap-align: start;
+display: grid;
+font-weight: 400;
+font-family: monospace;
+font-size: 20px;
+grid-template-columns:repeat(7,1fr);
+grid-template-rows: repeat(5,1fr);
+gap: 1px;
+grid-template-areas: 
+". . . . . . ."
+". . six six six . ."
+". . six six six . ."
+" . . six six six . ."
+". . . . . . ."
+}
+
+
+.container-home {
+  width: 100%;
+  height: 100%;
+  display: table;
+  z-index: 3;
+
+}
+.child {
+  display: table-row;
+  z-index: 2;
+}
+
+.content {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+
+.HoverButton {
+  position: relative;
+  display: inline-block;
+  z-index: 20;
+  padding: 0 2%;
+  overflow: hidden;
+  z-index: 2;
+}
+
+
+.HoverButton2 {
+  position: relative;
+  display: none;
+  z-index: 20;
+  padding: 0 2%;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.HoverButton .bg {
+  pointer-events: none;
+  position: absolute;
+  background-color: rgba(114, 11, 109, 0.658);
+  height: 100%;
+  width: 125%;
+  display: block;
+  transform: translateX(-112%) skew(-10deg);
+}
+
+h1 {
+  color: #fffafdd2;
+  position: relative;
+  font-weight: normal;
+  font-family: monospace;
+  z-index: 1;
+  margin: 0;
+  font-size: 11vmax;
+  mix-blend-mode: difference;
+}
+
+
+.Cursor {
+  pointer-events: none;
+  position: fixed;
+  display: block;
+  border-radius: 0;
+  transform-origin: center center;
+  mix-blend-mode: difference;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  filter: url("#goo");
+}
+
+.Cursor span {
+  position: absolute;
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: 20px;
+  background-color: #fffafdd2;
+  transform-origin: center center;
+  transform: translate(-50%, -50%);
+}
+
+.stamp {
+  position: absolute;
+  right: 6vmax;
+  top: 6vmax;
+  z-index: 10;
+}
+
+.stamp p {
+  color: #fffafdd2;
+  font-size: 2vmax;
+  font-family: monospace;
+  margin: 0;
+}
+
+.stamp .circle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  display: block;
+  left: 50%;
+  top: 50%;
+  background-color: transparent;
+  -webkit-animation: rotating 15s linear infinite;
+  animation: rotating 15s linear infinite;
+}
+
+svg {
+  display: none;
+}
+
+.stamp .circle span {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 0.8vmax;
+  color: #fffafdd2;
+  height: 5vmax;
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  bottom: 0;
+  transform-origin: bottom center;
+}
+
+.icons {
+  background-color: #fffafdd2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  height: 2.2rem;
+  /* height: 3vh; */
+}
+
+.child img {
+  filter: drop-shadow(2px 0px 2px #000);
+  position: relative;
+}
+
+.icons a {
+  font-size: 24px;
+  text-decoration: none;
+  color: #1d1d1c;
+  padding-inline: 0.3%;
+  cursor: none
+}
+
+.icons2 {
+  background-color: #1d1d1c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  /* height: 3vh; */
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  height: 2.2rem;
+}
+
+
+.icons2 a {
+  font-size: 24px;
+  text-decoration: none;
+  color: #fffafdd2;
+  padding-inline: 0.3%;
+  cursor: none
+}
+
+a:hover {
+  color: rgba(114, 11, 109, 0.658);
+  filter: blur(0.8px); 
+  transition: color 1s;
+}
+
+a {
+text-decoration: none;
+color: #fffafdd2;
+font-family: monospace;
+cursor: inherit;
+}
+
+#particles.js {
+  z-index: 4;
+
+}
+.corvo a:hover {
+color:#fffafdd2 
+}
+
+
+.circle {
+padding:0%
+
+}
+.char1 {
+  transform: rotate(20deg);
+}
+
+.char2 {
+  transform: rotate(40deg);
+}
+
+.char3 {
+  transform: rotate(60deg);
+}
+
+.char4 {
+  transform: rotate(80deg);
+}
+
+.char5 {
+  transform: rotate(100deg);
+}
+
+.char6 {
+  transform: rotate(120deg);
+}
+
+.char7 {
+  transform: rotate(140deg);
+}
+
+.char8 {
+  transform: rotate(160deg);
+}
+
+.char9 {
+  transform: rotate(180deg);
+}
+
+.char10 {
+  transform: rotate(200deg);
+}
+
+.char11 {
+  transform: rotate(220deg);
+}
+
+.char12 {
+  transform: rotate(240deg);
+}
+
+.char13 {
+  transform: rotate(260deg);
+}
+
+.char14 {
+  transform: rotate(280deg);
+}
+
+.char15 {
+  transform: rotate(300deg);
+}
+
+.char16 {
+  transform: rotate(320deg);
+}
+
+.char17 {
+  transform: rotate(340deg);
+}
+
+.char18 {
+  transform: rotate(360deg);
+}
+
+.char1:hover, .char2:hover, .char3:hover, .char4:hover, .char5:hover, .char6:hover, .char7:hover, .char8:hover, .char9:hover, .char10:hover, .char11:hover, .char12:hover, .char13:hover, .char14:hover, .char15:hover, .char16:hover, .char17:hover, .char18:hover {
+  filter: blur(1px);
+  }
+
+
+@-webkit-keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
